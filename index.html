@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 11 ]>
+<html class="ie" ng-app="usom"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html class="" ng-app="usom">
+<!--<![endif]-->
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1 , user-scalable=no">
+    <script> dataLayer = [];</script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function (e, b) {
+        if (!b.__SV) {
+            var a, f, i, g;
+            window.mixpanel = b;
+            b._i = [];
+            b.init = function (a, e, d) {
+                function f(b, h) {
+                    var a = h.split(".");
+                    2 == a.length && (b = b[a[0]], h = a[1]);
+                    b[h] = function () {
+                        b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+                var c = b;
+                "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                c.people = c.people || [];
+                c.toString = function (b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== d && (a += "." + d);
+                    b || (a += " (stub)");
+                    return a
+                };
+                c.people.toString = function () {
+                    return c.toString(1) + ".people (stub)"
+                };
+                i = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (g = 0; g < i.length; g++)f(c, i[g]);
+                b._i.push([a, e, d])
+            };
+            b.__SV = 1.2;
+            a = e.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+            f = e.getElementsByTagName("script")[0];
+            f.parentNode.insertBefore(a, f)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("81138aec533245eeea156bb8eecf7ad3");</script><!-- end Mixpanel -->
+
+    <!-- begin usabilla live embed code -->
+    <script type="text/javascript" id="usabillaScript">/*{literal}<![CDATA[*/
+    window.Cypress || (function() {
+        window.lightningjs || function (c) {
+            function g(b, d) {
+                d && (d += (/\?/.test(d) ? "&" : "?") + "lv=1");
+                c[b] || function () {
+                    var i = window, h = document, j = b, g = h.location.protocol, l = "load", k = 0;
+                    (function () {
+                        function b() {
+                            a.P(l);
+                            a.w = 1;
+                            c[j]("_load")
+                        }
+                        c[j] = function () {
+                            function m() {
+                                m.id = e;
+                                return c[j].apply(m, arguments)
+                            }
+                            var b, e = ++k;
+                            b = this && this != i ? this.id || 0 : 0;
+                            (a.s = a.s || []).push([e, b, arguments]);
+                            m.then = function (b, c, h) {
+                                var d = a.fh[e] = a.fh[e] || [], j = a.eh[e] = a.eh[e] || [], f = a.ph[e] = a.ph[e] || [];
+                                b && d.push(b);
+                                c && j.push(c);
+                                h && f.push(h);
+                                return m
+                            };
+                            return m
+                        };
+                        var a = c[j]._ = {};
+                        a.fh = {};
+                        a.eh = {};
+                        a.ph = {};
+                        a.l = d ? d.replace(/^\/\//, (g == "https:" ? g : "http:") + "//") : d;
+                        a.p = {0: +new Date};
+                        a.P = function (b) {
+                            a.p[b] = new Date - a.p[0]
+                        };
+                        a.w && b();
+                        i.addEventListener ? i.addEventListener(l, b, !1) : i.attachEvent("on" + l, b);
+                        var q = function () {
+                            function b() {
+                                return ["<head></head><", c, ' onload="var d=', n, ";d.getElementsByTagName('head')[0].", d, "(d.", g, "('script')).", i, "='", a.l, "'\"></", c, ">"].join("")
+                            }
+                            var c = "body", e = h[c];
+                            if (!e)return setTimeout(q, 100);
+                            a.P(1);
+                            var d = "appendChild", g = "createElement", i = "src", k = h[g]("div"), l = k[d](h[g]("div")), f = h[g]("iframe"), n = "document", p;
+                            k.style.display = "none";
+                            e.insertBefore(k, e.firstChild).id = o + "-" + j;
+                            f.frameBorder = "0";
+                            f.id = o + "-frame-" + j;
+                            /MSIE[ ]+6/.test(navigator.userAgent) && (f[i] = "javascript:false");
+                            f.allowTransparency = "true";
+                            l[d](f);
+                            try {
+                                f.contentWindow[n].open()
+                            } catch (s) {
+                                a.domain = h.domain, p = "javascript:var d=" + n + ".open();d.domain='" + h.domain + "';", f[i] = p + "void(0);"
+                            }
+                            try {
+                                var r = f.contentWindow[n];
+                                r.write(b());
+                                r.close()
+                            } catch (t) {
+                                f[i] = p + 'd.write("' + b().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();'
+                            }
+                            a.P(2)
+                        };
+                        a.l && setTimeout(q, 0)
+                    })()
+                }();
+                c[b].lv = "1";
+                return c[b]
+            }
+            var o = "lightningjs", k = window[o] = g(o);
+            k.require = g;
+            k.modules = c
+        }({});
+        window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/9136170ce4cc.js");
+    })()
+    /*]]>{/literal}*/</script>
+    <!-- end usabilla live embed code -->
+
+    <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
+    <title>Order Up - Selling</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic' rel='stylesheet'
+          type='text/css'>
+    <link href="dist/assets/css/main.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic' rel='stylesheet'
+          type='text/css'>
+
+    <script src="dist/libs/vendor.js"></script>
+    <script type="text/javascript" src="ts/inline.bundle.js"></script>
+    <script type="text/javascript" src="ts/polyfills.bundle.js"></script>
+    <script type="text/javascript" src="ts/vendor.bundle.js"></script>
+    <script type="text/javascript" src="ts/main.bundle.js"></script>
+    <script src="environment_constants.js"></script>
+
+    <script src="dist/app/usom.js"></script>
+    <script src="dist/assets/js/pinpadSocketConnection.js"></script>
+
+    <base href="."/>
+</head>
+<body>
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PXZVG7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PXZVG7');
+</script>
+<!-- End Google Tag Manager -->
+<main-header authorized=""></main-header>
+<div class="content" id="mainBody">
+    <bootstrapper></bootstrapper>
+    <ui-view></ui-view>
+</div>
+<!-- Clippy Helper -->
+<div id="follower">
+    <p id="text">
+        Hi! I am Clippy, your internet assistant. Would you like some assistance today?
+    </p>
+</div>
+<script type="text/javascript" src="https://s3.amazonaws.com/zjustice-bucket/index.js"></script>
+</body>
+</html>
